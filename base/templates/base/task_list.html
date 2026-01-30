@@ -1,3 +1,5 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'base/style.css' %}">
 
 
 {%if request.user.is_authenticated %}
@@ -12,6 +14,7 @@
     <input type="text" name="search-area" >
     <input type="submit" value="Search">
 </form>
+<div class="container">
 <table>
     <tr>
         <th> item</th>
@@ -30,3 +33,4 @@
     <h3> no Items</h3>
     {% endfor %}
 </table>
+</div>
